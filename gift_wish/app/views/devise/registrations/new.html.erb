@@ -7,6 +7,26 @@
     <%= f.label :email %><br />
     <%= f.email_field :email, autofocus: true %>
   </div>
+  <div class="field">
+    <%= f.label :username %><br />
+    <%= f.text_field :username%>
+  </div>
+  <div class="field">
+    <%= f.label :first_name %><br />
+    <%= f.text_field :first_name%>
+  </div>
+  <div class="field">
+    <%= f.label :last_name %><br />
+    <%= f.text_field :last_name%>
+  </div>
+  <div class="field">
+    <%= f.label :gender %><br />
+    <%= f.select :gender, %w{ Male Female }, :prompt => "Gender..." %>
+  </div>
+  <div class="field">
+    <%= f.label :birth_date %><br />
+    <%= f.date_select :birth_date, :start_year => 1950%>
+  </div>
 
   <div class="field">
     <%= f.label :password %>
