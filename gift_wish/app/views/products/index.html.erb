@@ -1,6 +1,7 @@
+<div class="products">
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Products</h1>
+<h1>All Products</h1>
 
 <table>
   <thead>
@@ -23,7 +24,7 @@
         <td><%= product.price %></td>
         <td><%= product.category_id %></td>
         <td><%= link_to 'Show', product %></td>
-        <td><%= link_to '+', users_add_path, method: :post, data: { confirm: 'Are you sure?' }  %></td>
+        <td><%= link_to '+', "/products/#{product.id}/add", data: { confirm: 'Are you sure?' }  %></td>
         <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
@@ -33,3 +34,5 @@
 <br>
 
 <%= link_to 'New Product', new_product_path %>
+
+</div>

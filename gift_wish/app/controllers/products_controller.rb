@@ -38,20 +38,19 @@ class ProductsController < ApplicationController
     end
   end
 
-  def add
-      @product = Product.find(product_id)
-      current_user.products << @product
+  def addProductToUser
+    @product = Product.find(params[:product_id])
+    current_user.products << @product
 
-      respond_to do |format|
-        if @product.save
-          format.html { redirect_to @product, notice: 'Product was successfully created.' }
-          format.json { render :show, status: :created, location: @product }
-        else
-          format.html { render :new }
-          format.json { render json: @product.errors, status: :unprocessable_entity }
-        end
+    respond_to do |format|
+      if @product.save
+        format.html { redirect_to products_path, notice: 'Product was successfully added.' }
+        # format.json { render :show, status: :created, location: @product }
+      else
+        format.html { redirect_to products_path, notice: 'Product was not added.' }
       end
     end
+  end
 
 
 
