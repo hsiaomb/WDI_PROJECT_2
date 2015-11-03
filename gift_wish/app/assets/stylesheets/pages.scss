@@ -4,6 +4,7 @@
 #home_one{
 	    width:100%; 
 	    height:100%;
+	    background-image: url("celebration.jpg");
 	    background-size: cover;
 }
 
@@ -13,6 +14,18 @@
 
 .navbar {
 	margin: 0px;
+}
+
+.panel-body{
+	padding-top:0;
+}
+.panel-heading{
+	padding-bottom:0;
+}
+.panel-title{
+	font-size:35px;
+	font-family: 'Pacifico', cursive;
+	color: white;
 }
 
 .row {

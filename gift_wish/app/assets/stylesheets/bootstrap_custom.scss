@@ -1,5 +1,8 @@
 $navbar-default-bg: red;
+$panel-default-heading-bg: opacity 0.8;
+$panel-bg: opacity 0.4;
+$panel-footer-bg: opacity 0.8;
+$panel-default-border: none;
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
-
