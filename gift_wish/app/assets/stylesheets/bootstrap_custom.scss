@@ -90,9 +90,20 @@ input.btn-default{
  	padding: 0px;
  }
 
+ div.users_container{
+ 	overflow-y: scroll; 
+ 	height: 420px;
+ 	padding: 0px;
+ }
+
  input#filter{
  	margin-bottom: 15px;
  }
 
+ super div .users_show{
+
+ 	padding: 0px;
+ 	background-color: #007EA7;
+ }
 
 

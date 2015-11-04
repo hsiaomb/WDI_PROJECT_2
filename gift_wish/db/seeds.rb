@@ -5,3 +5,17 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+password = "password"
+
+User.new 20 do |user|
+  user.first_name = Faker::Name.name.first_name
+  user.last_name = Faker::Name.name.last_name
+  user.email = Faker::Internet.email
+  user.username = Faker::Name.name
+  user.birth_date = Faker::Date.date
+  user.photo_url = Faker::Image.image
+
+  user.encrypted_password = User.new(:password => password).encrypted_password
+  # rest of your code here      
+end

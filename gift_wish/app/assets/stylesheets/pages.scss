@@ -57,3 +57,12 @@ li a{
 .users_info{
 	list-style-type: none;
 }
+
+div .users{
+	display: inline-block;
+}
+
+div.users_show.panel.panel-primary.col-md-2.col-md-offset-1{
+	padding: 0px;
+	height: 550px;
+}

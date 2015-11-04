@@ -1,16 +1,11 @@
-<div class="user_head panel panel-default col-md-8 col-md-offset-2">
-  <div class="panel-body">
-    Users
-  </div>
-</div>
-
-<div class="users panel panel-primary col-md-3">
+<div class="users_show panel panel-primary col-md-2 col-md-offset-1">
 	<div class="panel-heading">
-		<%= @user.first_name %>
+		<%= @user.first_name %> <%= @user.last_name %><br />
+		<%= @user.username %>
 	</div>
 	<div class="panel-body">
 	<div>
-	<%= image_tag @user.photo_url %>
+	<%= image_tag @user.photo_url, size:"200x200" %>
 	</div>
 	</div>
 </div>
