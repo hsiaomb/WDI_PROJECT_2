@@ -1,55 +1,82 @@
-<h2>Edit <%= resource_name.to_s.humanize %></h2>
+<div class="sign_up panel panel-default col-md-8 col-md-offset-2">
+  <div class="panel-heading">
+    <h2>Edit Account Details <%= resource_name.to_s.humanize %></h2>
+  </div>
+  <div class="panel-body">
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put, class: "form-inline" }) do |f| %>
+    <%= devise_error_messages! %>
+    <div class="form-group field">
+      <%= f.label :email %><br />
+      <%= f.email_field :email, autofocus: true, :class=>"form-control" %>
+    </div>
+    <div class="form-group field">
+      <%= f.label :username %><br />
+      <%= f.text_field :username, :class=>"form-control" %>
+    </div>
+    <div class="form-group field">
+      <%= f.label :first_name %><br />
+      <%= f.text_field :first_name, :class=>"form-control" %>
+    </div>
+    <div class="form-group field">
+      <%= f.label :last_name %><br />
+      <%= f.text_field :last_name, :class=>"form-control" %>
+    </div>
+    <div class="form-group field">
+      <%= f.label :photo_url %><br />
+      <%= f.text_field :photo_url, :class=>"form-control" %>
+    </div>
+    <div class="form-group field">
+      <%= f.label :gender %><br />
+      <%= f.select :gender, %w{ Male Female }, :prompt => "Gender...", :class=>"form-control" %>
+    </div>
+    <div class="form-group field">
+      <%= f.label :birth_date %><br />
+      <%= f.date_select :birth_date, :start_year => 1950, :class=>"form-control" %>
+    </div>
+    <br />
+    <div class="form-group field">
+      <%= f.label :shirt_size %><br />
+      <%= f.select :shirt_size, %w{ XS S M L XL XXL XXXL XXXXL }, :prompt => "Shirt...", :class=>"form-control" %>
+    </div>
+    <div class="form-group field">
+      <%= f.label :shoe_size %><br />
+      <%= f.select :shoe_size, options_for_select((2..16).step(0.5).to_a.map{|s| ["#{s}", s]}), :prompt => "Shoe...",:class=>"form-control" %>
+    </div>
+    <div class="form-group field">
+      <%= f.label :waist_size %><br />
+      <%= f.select :waist_size, %w{ 000 00 0 2 4 6 8 10 12 14 16 18 20 30 32 33 34 35 36 38 40 42 44 46}, :prompt => "Waist...",:class=>"form-control" %>
+    </div>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
-  <%= devise_error_messages! %>
+    <div class="form-group field">
+      <%= f.label :dress_size %> <i>(if applicable)</i><br />
+      <%= f.select :dress_size,%w{ 000 00 0 2 4 6 8 10 12 14 16 18 20}, :prompt => "Dress...",:class=>"form-control" %>
+    </div>
+    <br />
+    <div class="form-group field">
+        <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
+        <%= f.password_field :current_password, autocomplete: "off",:class=>"form-control" %>
+      </div>
+      <br />
+      <h2> Change Password </h2>
+    <div class="form-group field">
+        <%= f.label :password %> <br />
+        <%= f.password_field :password, autocomplete: "off",:class=>"form-control" %>
+      </div>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
-  </div>
-  <div class="field">
-    <%= f.label :username %><br />
-    <%= f.text_field :username%>
-  </div>
-  <div class="field">
-    <%= f.label :first_name %><br />
-    <%= f.text_field :first_name%>
-  </div>
-  <div class="field">
-    <%= f.label :last_name %><br />
-    <%= f.text_field :last_name%>
-  </div>
-  <div class="field">
-    <%= f.label :gender %><br />
-    <%= f.select :gender, %w{ Male Female }, :prompt => "Gender..." %>
-  </div>
-  <div class="field">
-    <%= f.label :birth_date %><br />
-    <%= f.date_select :birth_date, :start_year => 1950%>
-  </div>
+      <div class="form-group field">
+        <%= f.label :password_confirmation %><br />
+        <%= f.password_field :password_confirmation, autocomplete: "off",:class=>"form-control" %>
+      </div>
 
-  <div class="field">
-    <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
-    <%= f.password_field :password, autocomplete: "off" %>
+    <div class="actions">
+     <%= f.submit "Update", :class=>"btn btn-default navbar-btn" %> 
+   </div>
+   <% end %>
+     <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, :class=>"cancel btn btn-default navbar-btn" %>
+  <%= link_to "Back", :back, :class=>"cancel btn btn-default navbar-btn" %>
   </div>
+</div>
 
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %>
-  </div>
 
-  <div class="field">
-    <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
-    <%= f.password_field :current_password, autocomplete: "off" %>
-  </div>
 
-  <div class="actions">
-    <%= f.submit "Update" %>
-  </div>
-<% end %>
 
-<h3>Cancel my account</h3>
-
-<p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
-
-<%= link_to "Back", :back %>

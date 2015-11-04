@@ -1,13 +1,12 @@
     <div id="fullpage">
       <div class="section" id="home_one">
         <div class="row">
-          <div class="panel panel-default col-md-4 col-md-offset-6">
+          <div class="login panel panel-default col-md-4 col-md-offset-6">
             <div class="panel-heading">
               <h1 class="panel-title">Log In</h1>
             </div>
             <div class="panel-body">
-              <form class="form-inline">
-                <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+              <%= form_for(resource, as: resource_name, url: session_path(resource_name), html: {class: "form-inline"}) do |f| %>
                 <div class="form-group">
                   <%= f.label :email, :class=>'sr-only'%><br />
                   <%= f.text_field :email, :class=>'form-control', :placeholder=>"Email" %>
@@ -22,14 +21,12 @@
                   <%= f.check_box :remember_me %>
                   <%= f.label :remember_me %>
                 </div>
-                <% end -%>  
-              </form>
-            </div>
-            <div class="panel-footer">
-              <div class="actions">
-              <%= f.submit "Log in", :class=>"btn btn-default" %>
-                <%= link_to "Signup", new_user_registration_path%>
-              </div>
+                <div class="actions">
+                <%= f.submit "Log in" %>
+                 
+                 </div> 
+              <% end -%> 
+               <%= link_to "Signup", new_user_registration_path %> 
             </div>
           </div>
         </div>

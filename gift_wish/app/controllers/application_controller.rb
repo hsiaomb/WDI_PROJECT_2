@@ -13,7 +13,7 @@ class ApplicationController < ActionController::Base
     end
     devise_parameter_sanitizer.for(:sign_in) { |u| u.permit(:username, :email, :password, :remember_me) }
     devise_parameter_sanitizer.for(:account_update) do |u|
-      u.permit(:username, :first_name, :last_name, :gender, :email, :birth_date, :shirt_size, :shoe_size, :waist_size, :dress_size, :photo_url, :password, :password_confirmation)
+      u.permit(:username, :first_name, :last_name, :gender, :email, :birth_date, :shirt_size, :shoe_size, :waist_size, :dress_size, :photo_url, :password, :password_confirmation, :current_password)
     end
   end
 

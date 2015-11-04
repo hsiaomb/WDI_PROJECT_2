@@ -1,5 +1,32 @@
-<ul class = "users">
+<div class="user_head panel panel-default col-md-10 col-md-offset-1">
+  <div class="panel-body">
+    Users
+  </div>
+</div>
+<div class="live_search input-group col-md-4 col-md-offset-4 ">
+<form id="live-search" action="" class="styled" method="post">
+    <fieldset>
+        <input type="text" class="text-input form-control" placeholder="Search Users..." id="filter" value="" aria-describedby="basic-addon1"/>
+        <span id="filter-count"></span>
+    </fieldset>
+</form>
+</div>
+
+
+
+<div class="users_container col-md-10 col-md-offset-1">
   <% @users.each do |u| %>
-    <li><%= link_to u.first_name, u %></li>
+  <%= link_to u do %>
+  <div class="users panel panel-default col-md-2">
+    <div class="panel-heading"><%= u.first_name %> <%= u.last_name %><br />
+    <%= u.username %></div>
+    <div class="panel-body">
+    <ul class="users_info">
+     <li> <%= image_tag u.photo_url, size: "100x100" %></li>
+     <li> </li>
+     </ul>
+    </div>
+  </div>
   <% end %>
-</ul>
+  <% end %>
+  </div>

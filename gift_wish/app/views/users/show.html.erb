@@ -1,5 +1,22 @@
-<p class = "users">
-<% @user.products.each do |product| %>
+<div class="user_head panel panel-default col-md-8 col-md-offset-2">
+  <div class="panel-body">
+    Users
+  </div>
+</div>
+
+<div class="users panel panel-primary col-md-3">
+	<div class="panel-heading">
+		<%= @user.first_name %>
+	</div>
+	<div class="panel-body">
+	<div>
+	<%= image_tag @user.photo_url %>
+	</div>
+	</div>
+</div>
+
+<p>
+	<% @user.products.each do |product| %>
 	<%= product.title %>
 	<% end %>
-	</p>
+</p>
