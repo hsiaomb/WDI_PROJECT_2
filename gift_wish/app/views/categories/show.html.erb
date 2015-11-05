@@ -1,14 +1,26 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Category:</strong>
-  <%= @category.category %>
-</p>
-
-<p>
-  <strong>Product:</strong>
-  <%= @category.product_id %>
-</p>
-
-<%= link_to 'Edit', edit_category_path(@category) %> |
-<%= link_to 'Back', categories_path %>
+<div class="categories_show_container col-md-10 col-md-offset-1">
+<div class="categories_show panel panel-default col-md-10 col-md-offset-1">
+<div class="categories_show panel-heading">
+  <strong><%=@category.category%></strong>
+  </div>
+  <div class="categories_show panel-body">
+  <table class="table table-hover">
+  <tr>
+  <th>Product</th>
+  <th>Price</th>
+  <th>Link to Product</th>
+  </tr>
+    <% @category.products.each do |p| %>
+    <%= link_to p do %>
+    <tr>
+    <td><%= p.title %><br/>
+    <%= image_tag p.photo, size: "100x100" %></td>
+    <td><%= p.price %></td>
+    <td><%= button_to "Link to Product", p.product_url, :class=>"product_url btn btn-default navbar-btn " %></td>
+    </tr>
+    <% end %>
+    <% end %>
+    </table>
+    </div>
+    </div>
+    </div>

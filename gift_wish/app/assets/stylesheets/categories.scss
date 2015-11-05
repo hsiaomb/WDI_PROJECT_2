@@ -1,3 +1,14 @@
 // Place all the styles related to the Categories controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.categories_show_container{
+	padding:0px;
+}
+.categories_show .panel-body{
+	overflow-y: scroll; 
+	height: 560px;
+	padding: 0px;
+}
+.categories_show .panel-heading{
+	text-align: center;
+}

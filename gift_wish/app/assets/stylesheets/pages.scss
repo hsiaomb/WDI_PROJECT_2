@@ -57,6 +57,15 @@ li a{
 .users_info{
 	list-style-type: none;
 }
+.products_info{
+	list-style-type: none;
+	padding: 28px;
+}
+input.product_url {
+	margin:0px;
+	margin-top: 10px;
+	padding: 3px;
+}
 
 div .users{
 	display: inline-block;
@@ -64,5 +73,227 @@ div .users{
 
 div.users_show.panel.panel-primary.col-md-2.col-md-offset-1{
 	padding: 0px;
-	height: 550px;
+	height: 600px;
 }
+
+
+div.categories_container.col-md-10.col-md-offset-1{
+	padding:0px;
+	height: 600px;
+}
+.categories_container .panel-default.col-md-4:hover{
+	opacity: 0.4;
+}
+div.Books.panel.panel-default.col-md-4{
+	height:150px;
+	margin-bottom: 0px;
+	border-radius: 0px;
+	text-align: center;
+	background-image: url("books_background.jpg");
+	background-size:100%;
+	border:1px solid #007EA7;
+	font-family: 'Lato', sans-serif;
+	font-weight: 700;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+	color: #F2F2F2;
+	font-size:20px;
+}
+
+.Books .panel-body{
+	margin-top: 65px;
+}
+div.Vehicles.panel.panel-default.col-md-4{
+	height:150px;
+	margin-bottom: 0px;
+	border-radius: 0px;
+	text-align: center;
+	background-image: url("vehicles_background.png");
+	background-size:100%;
+	border:1px solid #007EA7;
+	font-family: 'Lato', sans-serif;
+	font-weight: 700;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+	color: #F2F2F2;
+	font-size:20px;
+}
+
+.Vehicles .panel-body{
+	margin-top: 65px;
+}
+div.Games.panel.panel-default.col-md-4{
+	height:150px;
+	margin-bottom: 0px;
+	border-radius: 0px;
+	text-align: center;
+	background-image: url("music_background.jpg");
+	background-size:100%;
+	border:1px solid #007EA7;
+	font-family: 'Lato', sans-serif;
+	font-weight: 700;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+	color: #F2F2F2;
+	font-size:20px;
+}
+
+.Games .panel-body{
+	margin-top: 65px;
+}
+div.Electronics.panel.panel-default.col-md-4{
+	height:150px;
+	margin-bottom: 0px;
+	border-radius: 0px;
+	text-align: center;
+	background-image: url("electronics_background.jpg");
+	background-size:100%;
+	border:1px solid #007EA7;
+	font-family: 'Lato', sans-serif;
+	font-weight: 700;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+	color: #F2F2F2;
+	font-size:20px;
+}
+
+.Electronics .panel-body{
+	margin-top: 65px;
+}
+div.DIY.panel.panel-default.col-md-4{
+	height:150px;
+	margin-bottom: 0px;
+	border-radius: 0px;
+	text-align: center;
+	background-image: url("garden_background.jpg");
+	background-size:100%;
+	border:1px solid #007EA7;
+	font-family: 'Lato', sans-serif;
+	font-weight: 700;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+	color: #F2F2F2;
+	font-size:20px;
+}
+
+.DIY .panel-body{
+	margin-top: 65px;
+}
+div.Jewellery.panel.panel-default.col-md-4{
+	height:150px;
+	margin-bottom: 0px;
+	border-radius: 0px;
+	text-align: center;
+	background-image: url("clothes_background.jpg");
+	background-size:100%;
+	border:1px solid #007EA7;
+	font-family: 'Lato', sans-serif;
+	font-weight: 700;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+	color: #F2F2F2;
+	font-size:20px;
+}
+
+.Jewellery .panel-body{
+	margin-top: 65px;
+}
+div.Outdoors.panel.panel-default.col-md-4{
+	height:150px;
+	margin-bottom: 0px;
+	border-radius: 0px;
+	text-align: center;
+	background-image: url("sports_background.jpg");
+	background-size:100%;
+	border:1px solid #007EA7;
+	font-family: 'Lato', sans-serif;
+	font-weight: 700;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+	color: #F2F2F2;
+	font-size:20px;
+}
+
+.Outdoors .panel-body{
+	margin-top: 65px;
+}
+div.Grocery.panel.panel-default.col-md-4{
+	height:150px;
+	margin-bottom: 0px;
+	border-radius: 0px;
+	text-align: center;
+	background-image: url("beauty_background.png");
+	background-size:100%;
+	border:1px solid #007EA7;
+	font-family: 'Lato', sans-serif;
+		font-weight: 700;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+	color: #F2F2F2;
+	font-size:20px;
+}
+
+.Grocery .panel-body{
+	margin-top: 65px;
+}
+.user_wishlist{
+	padding: 0px
+}
+.user_wishlist .panel-heading{
+	padding: 0px;
+	margin: 0px;
+	text-align: center;
+}
+div.Science.panel.panel-default.col-md-4{
+	height:150px;
+	margin-bottom: 0px;
+	border-radius: 0px;
+	text-align: center;
+	background-image: url("science_background.jpg");
+	background-size:100%;
+	border:1px solid #007EA7;
+	font-family: 'Lato', sans-serif;
+	font-weight: 700;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+	color: #F2F2F2;
+	font-size:20px;
+}
+
+.Science .panel-body{
+	margin-top: 65px;
+}
+.slide p{
+	font-size: 45px;
+	text-align: center;
+	color: #f2f2f2;
+	font-family: 'Lato', sans-serif;
+	font-weight: 400;
+}
+
+.two img{
+	margin-top:20px;
+}
+
+.one {
+	background-image: url("how_it_works.jpg");
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+	background-position: center;
+	background-size: 100%;
+}
+
+.two{
+	background-image: url("make_account.jpg");
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+	background-position: center;
+	background-size: 100%;
+}
+
+.three{
+	background-image: url("products_bg.jpg");
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+	background-position: center;
+	background-size: 100%;
+}
+.products_container {
+	background-color: #ffffff;
+}
+.products_container a{
+	padding: 3px;
+
+}
+
+
+
+

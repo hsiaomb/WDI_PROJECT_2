@@ -1,21 +1,72 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
+include Faker
+
+User.delete_all("username != 'michael.hsiao'")
+Product.delete_all("title != 'Jordan Eclipse'")
 
 password = "password"
 
-User.new 20 do |user|
-  user.first_name = Faker::Name.name.first_name
-  user.last_name = Faker::Name.name.last_name
-  user.email = Faker::Internet.email
-  user.username = Faker::Name.name
-  user.birth_date = Faker::Date.date
-  user.photo_url = Faker::Image.image
+10.times do
+	user = User.create ({ 
+		first_name: Name.first_name,
+		last_name: Name.last_name,
+		photo_url: "http://www.fillmurray.com/200/300",
+		username: Internet.user_name,
+		email: Internet.email,
+		gender: "Male",
+		shirt_size: "M",
+		birth_date: "1995/07/22",
+		shoe_size: "9.5",
+		waist_size: "32",
+		dress_size: "",
+		password: password,
+		password_confirmation: password})
 
-  user.encrypted_password = User.new(:password => password).encrypted_password
-  # rest of your code here      
+		user = User.create ({ 
+			first_name: Name.first_name,
+			last_name: Name.last_name,
+			photo_url: "https://www.placecage.com/200/300",
+			username: Internet.user_name,
+			email: Internet.email,
+			gender: "Female",
+			shirt_size: "F",
+			birth_date: "1992/07/06",
+			shoe_size: "6.5",
+			waist_size: "8",
+			dress_size: "6",
+			password: password,
+			password_confirmation: password})
+
+		product = Product.create ({ 
+					title: Commerce.product_name,
+					category_id: Number.between(1, 9),
+					price: Number.decimal(3, 2),
+					product_url: "http://www.amazon.co.uk/",
+					photo: "http://ecx.images-amazon.com/images/I/61Su9Gvq-fL._SX522_.jpg"})
+
+		product = Product.create ({ 
+					title: Commerce.product_name,
+					category_id: Number.between(1, 9),
+					price: Number.decimal(3, 2),
+					product_url: "http://www.amazon.co.uk/",
+					photo: "http://ecx.images-amazon.com/images/I/819R4oLggwL._UY879_.jpg"})
+
+		product = Product.create ({ 
+					title: Commerce.product_name,
+								category_id: Number.between(1, 9),
+								price: Number.decimal(3, 2),
+								product_url: "http://www.amazon.co.uk/",
+								photo: "http://ecx.images-amazon.com/images/I/41rMfUQjRcL._AC_SY220_.jpg"})
+
+		product = Product.create ({ 
+					title: Commerce.product_name,
+								category_id: Number.between(1, 9),
+								price: Number.decimal(3, 2),
+								product_url: "http://www.amazon.co.uk/",
+								photo: "http://ecx.images-amazon.com/images/I/51Nl%2B2DhSrL._AC_SY220_.jpg"})
+					
+					
+
+	p user.inspect
+	# user.encrypted_password = User.new({:password => password.encrypted_password})
+		
 end

@@ -1,17 +1,48 @@
-<div class="users_show panel panel-primary col-md-2 col-md-offset-1">
+<div class="users_show_container col-md-10 col-md-offset-1">
+<div class="users_show panel panel-primary col-md-2">
 	<div class="panel-heading">
 		<%= @user.first_name %> <%= @user.last_name %><br />
-		<%= @user.username %>
+		<%= @user.username %><br />
+		<%= image_tag @user.photo_url, size:"200x200" %>
 	</div>
 	<div class="panel-body">
+	<b>Gender:</b> <br /><%= @user.gender %><br />
+	<b>Email:</b> <br /><%= @user.email %><br />
+	<b>Born:</b> <br /><%= @user.birth_date %><br />
+	<b>Shirt Size:</b> <br /><%= @user.shirt_size %><br />
+	<b>Shoe Size:</b> <br /><%= @user.shoe_size %><br />
+	<b>Waist Size:</b> <br /><%= @user.waist_size %><br />
+	<% if @user.dress_size != "" %>
+	<b>Dress Size:</b> <br /><%= @user.dress_size %>
+	<% end %>
 	<div>
-	<%= image_tag @user.photo_url, size:"200x200" %>
 	</div>
 	</div>
 </div>
 
-<p>
-	<% @user.products.each do |product| %>
-	<%= product.title %>
-	<% end %>
-</p>
+<div class="user_wishlist panel panel-default col-md-9">
+  <div class="panel-heading">
+    <%= @user.first_name %>'s Wishlist
+  </div>
+  <div class="panel-body">
+<table class="table table-hover">
+<tr>
+<th>Product</th>
+<th>Price</th>
+<th>Link to Product</th>
+</tr>
+  <% @user.products.each do |p| %>
+  <%= link_to p do %>
+  <tr>
+  <td><%= p.title %><br/>
+  <%= image_tag p.photo, size: "100x100" %></td>
+  <td><%= p.price %></td>
+  <td><%= button_to "Link to Product", p.product_url, :class=>"product_url btn btn-default navbar-btn " %></td>
+  </tr>
+  <% end %>
+  <% end %>
+  </table
+  </div>
+</div>
+
+

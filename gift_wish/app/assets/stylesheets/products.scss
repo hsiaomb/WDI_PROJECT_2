@@ -1,3 +1,14 @@
 // Place all the styles related to the Products controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.product_button a{
+	margin-left: 25px;
+}
+
+.products_info a{
+	padding: 5px;
+}
+.product_info li{
+	padding: 3px;
+	margin: 0px;
+}
