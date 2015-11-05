@@ -3,7 +3,8 @@ class AddJoinTable < ActiveRecord::Migration
     create_join_table :products, :users do |t|
       # t.index [:product_id, :user_id]
       # t.index [:user_id, :product_id]
-     drop_table :wishlists,
+
     end
+     drop_table :wishlists
   end
 end
