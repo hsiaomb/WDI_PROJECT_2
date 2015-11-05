@@ -1,50 +1,55 @@
     <div id="fullpage">
       <div class="section" id="home_one">
+        <%if user_signed_in? %>
+        <h1 class="welcome animated zoomIn"> GiftWish </h1>
+        <% else %>
         <div class="row">
-          <div class="login panel panel-default col-md-4 col-md-offset-6">
+          <div class="login panel panel-default col-md-4 col-md-offset-6 animated fadeIn">
             <div class="panel-heading">
               <h1 class="panel-title">Log In</h1>
             </div>
             <div class="panel-body">
               <%= form_for(resource, as: resource_name, url: session_path(resource_name), html: {class: "form-inline"}) do |f| %>
-                <div class="form-group">
-                  <%= f.label :email, :class=>'sr-only'%><br />
-                  <%= f.text_field :email, :class=>'form-control', :placeholder=>"Email" %>
-                </div>
+              <div class="form-group">
+                <%= f.label :email, :class=>'sr-only'%><br />
+                <%= f.text_field :email, :class=>'form-control', :placeholder=>"Email" %>
+              </div>
 
-                <div class="form-group">
-                  <%= f.label :password, :class=>'sr-only' %><br />
-                  <%= f.password_field :password, autocomplete: "off", :class=>'form-control', :placeholder=>"Password" %>
-                </div>
-                <% if devise_mapping.rememberable? -%>
-                <div class="field">
-                  <%= f.check_box :remember_me %>
-                  <%= f.label :remember_me %>
-                </div>
-                <div class="actions">
+              <div class="form-group">
+                <%= f.label :password, :class=>'sr-only' %><br />
+                <%= f.password_field :password, autocomplete: "off", :class=>'form-control', :placeholder=>"Password" %>
+              </div>
+              <% if devise_mapping.rememberable? -%>
+              <div class="field">
+                <%= f.check_box :remember_me %>
+                <%= f.label :remember_me %>
+              </div>
+              <div class="actions">
                 <%= f.submit "Log in" %>
-                 
-                 </div> 
+
+              </div> 
               <% end -%> 
               <%= link_to "Signup", "/users/sign_up" %> 
             </div>
           </div>
         </div>
+        <% end %>
+        <% end %>
       </div>
 
       <div class="section" id="home_two">
-        <div class="slide one"> <p class = "how-to col-md-10 col-md-offset-1">How It Works<p></div>
+        <div class="slide one"> <p class = "how-to col-md-5 col-md-offset-6">How It Works<p></div>
         <div class="slide two"> 
-          <p class = "col-md-3 col-md-offset-6">Make an Account.</p>
+          <p class = "col-md-3 col-md-offset-3">Make an Account.</p>
         </div>
         <div class="slide three"> 
-          <p class = "col-md-4 col-md-offset-6">Add a new product into your wishlist. <br />
-            Or see what exciting new products other people have added to their wishlists.</p>
+          <p class = "col-md-4 col-md-offset-2">Add a new product into your wishlist. <br />
+            Or see what exciting new products other people have added to theirs.</p>
           </div>
-          <div class="slide"> <p class = "col-md-4 col-md-offset-6">Relieve your friends & family from the stress of finding you that perfect gift.<p></div>
+          <div class="slide four"> <p class = "col-md-4 col-md-offset-6">Relieve your friends & family from the stress of finding you that perfect gift.<p>
+          </div>
         </div>
       </div>
-      <% end %>
 
 
 

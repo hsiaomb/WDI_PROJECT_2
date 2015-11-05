@@ -14,4 +14,5 @@ class User < ActiveRecord::Base
   validates :shirt_size, presence: true
   validates :shoe_size, presence: true
   validates :waist_size, presence: true
+  validates :gender, presence: true
 end

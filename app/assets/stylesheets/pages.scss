@@ -267,10 +267,14 @@ div.Science.panel.panel-default.col-md-4{
 }
 
 .one {
-	background-image: url("how_it_works.jpg");
+	background-image: url("products_bg.jpg");
 	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 	background-position: center;
 	background-size: 100%;
+	background-repeat: no-repeat;
+}
+.one p{
+	font-size: 70px;
 }
 
 .two{
@@ -278,13 +282,21 @@ div.Science.panel.panel-default.col-md-4{
 	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 	background-position: center;
 	background-size: 100%;
+	background-repeat: no-repeat;
 }
 
 .three{
-	background-image: url("products_bg.jpg");
+	background-image: url("Mike-BG4.jpg");
 	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 	background-position: center;
 	background-size: 100%;
+	background-repeat: no-repeat;
+}
+.four{
+	background-image: url("Mike-BG3.jpg");
+	background-position: center;
+	background-size: 100%;
+	background-repeat: no-repeat;
 }
 .products_container {
 	background-color: #ffffff;
@@ -293,6 +305,15 @@ div.Science.panel.panel-default.col-md-4{
 	padding: 3px;
 
 }
+
+.welcome{
+	font-size: 125px;
+	font-family: 'Montez', cursive;
+	color: #FFFFFF;
+	text-align: center;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
 
 
 
