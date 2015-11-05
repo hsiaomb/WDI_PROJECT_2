@@ -26,8 +26,9 @@
     <% if user_signed_in? && !current_user.products.include?(p) %>
     <td><%= link_to '+ Add Product', "/products/#{p.id}/add", :class=>" add btn btn-default navbar-btn", data: { confirm: 'Are you sure?' }  %></td>
     </tr>
-    <% else %>
+    <% elsif user_signed_in? && current_user.products.include?(p) %>
     <td>Already in Your Wishlist</td>
+    <% else %>
     <% end %>
 
     <% end %>

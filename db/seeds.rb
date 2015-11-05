@@ -1,7 +1,7 @@
 include Faker
 
 User.delete_all("username != 'michael.hsiao'")
-Product.delete_all("title != 'Jordan Eclipse'")
+Product.delete_all
 
 password = "password"
 
@@ -44,8 +44,8 @@ users = []
 		category_id: Number.between(1, 9),
 		price: Number.decimal(3, 2),
 		product_url: "http://www.amazon.co.uk/",
-		photo: "http://ecx.images-amazon.com/images/I/61Su9Gvq-fL._SX522_.jpg",
-	user_id: users.sample.id})
+		photo: "http://ecx.images-amazon.com/images/I/61Su9Gvq-fL._SX522_.jpg"})
+	product.users << User.where(:id => users.sample.id)
 
 
 	product = Product.create ({ 
@@ -53,24 +53,27 @@ users = []
 		category_id: Number.between(1, 9),
 		price: Number.decimal(3, 2),
 		product_url: "http://www.amazon.co.uk/",
-		photo: "http://ecx.images-amazon.com/images/I/819R4oLggwL._UY879_.jpg",
-	user_id: users.sample.id})
+		photo: "http://ecx.images-amazon.com/images/I/819R4oLggwL._UY879_.jpg"})
+	product.users << User.where(:id => users.sample.id)
+
 
 	product = Product.create ({ 
 		title: Commerce.product_name,
 		category_id: Number.between(1, 9),
 		price: Number.decimal(3, 2),
 		product_url: "http://www.amazon.co.uk/",
-		photo: "http://ecx.images-amazon.com/images/I/41rMfUQjRcL._AC_SY220_.jpg",
-	user_id: users.sample.id})
+		photo: "http://ecx.images-amazon.com/images/I/41rMfUQjRcL._AC_SY220_.jpg"})
+	product.users << User.where(:id => users.sample.id)
+
 
 	product = Product.create ({ 
 		title: Commerce.product_name,
 		category_id: Number.between(1, 9),
 		price: Number.decimal(3, 2),
 		product_url: "http://www.amazon.co.uk/",
-		photo: "http://ecx.images-amazon.com/images/I/51Nl%2B2DhSrL._AC_SY220_.jpg",
-		user_id: users.sample.id})
+		photo: "http://ecx.images-amazon.com/images/I/51Nl%2B2DhSrL._AC_SY220_.jpg"})
+	product.users << User.where(:id => users.sample.id)
+
 
 
 
