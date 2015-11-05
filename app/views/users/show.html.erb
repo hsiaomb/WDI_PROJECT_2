@@ -30,6 +30,9 @@
 <th>Product</th>
 <th>Price</th>
 <th>Link to Product</th>
+<% if @user.id == current_user.id %>
+<th></th>
+<% end %>
 </tr>
   <% @user.products.each do |p| %>
   <%= link_to p do %>
@@ -37,8 +40,11 @@
   <td><%= p.title %><br/>
   <%= image_tag p.photo, size: "100x100" %></td>
   <td><%= p.price %></td>
-  <td><%= button_to "Link to Product", p.product_url, :class=>"product_url btn btn-default navbar-btn " %></td>
+  <td> <%= button_to "Link to Product", p.product_url, :class=>"product_url btn btn-default navbar-btn " %> </td>
+  <% if @user.id == current_user.id %>
+  <td><%= link_to 'Delete from my wishlist', "/users/product/#{p.id}", method: :delete, data: { confirm: 'Are you sure?' }, :class=>"product_url btn btn-default navbar-btn "  %></td>
   </tr>
+  <% end %>
   <% end %>
   <% end %>
   </table

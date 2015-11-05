@@ -297,6 +297,7 @@ div.Science.panel.panel-default.col-md-4{
 	background-position: center;
 	background-size: 100%;
 	background-repeat: no-repeat;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 .products_container {
 	background-color: #ffffff;
@@ -312,6 +313,12 @@ div.Science.panel.panel-default.col-md-4{
 	color: #FFFFFF;
 	text-align: center;
 	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+.product_add{
+	color: #FFFFFF;
+}
+a.product_url{
+	padding: 3px
 }
 
 

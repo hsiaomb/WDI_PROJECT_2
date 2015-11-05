@@ -1,5 +1,8 @@
+
+<div class="login panel panel-default col-md-4 col-md-offset-4 animated fadeIn">
 <p id="notice"><%= notice %></p>
 
+<div class="product_add panel-body">
 <p>
   <strong>Title:</strong>
   <%= @product.title %>
@@ -18,6 +21,7 @@
   <strong>Category:</strong>
   <%= @product.category_id %>
 </p>
+</div>
 
 <%= link_to 'Edit', edit_product_path(@product) %> |
 <%= link_to 'Back', products_path %>

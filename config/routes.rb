@@ -7,4 +7,5 @@ Rails.application.routes.draw do
   root "pages#homepage"
 
   get "/products/:product_id/add", to: "products#addProductToUser"
+  delete "/users/product/:product_id", to: "users#delete_product"
 end

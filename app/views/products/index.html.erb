@@ -23,10 +23,13 @@
     <%= image_tag p.photo, size: "100x100" %></td>
     <td><%= p.price %></td>
     <td><%= button_to "Link to Product", p.product_url, :class=>"product_url btn btn-default navbar-btn " %></td>
-    <% if user_signed_in? %>
+    <% if user_signed_in? && !current_user.products.include?(p) %>
     <td><%= link_to '+ Add Product', "/products/#{p.id}/add", :class=>" add btn btn-default navbar-btn", data: { confirm: 'Are you sure?' }  %></td>
     </tr>
+    <% else %>
+    <td>Already in Your Wishlist</td>
     <% end %>
+
     <% end %>
     </table>
 </div>
