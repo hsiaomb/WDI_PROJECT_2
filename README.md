@@ -36,7 +36,7 @@ Final Product:
 ![alt tag](http://i.imgur.com/TpJynZp.png?1)<br />
 ![alt tag](http://i.imgur.com/Hdu9J4z.jpg?1)<br />
 ![alt tag](http://i.imgur.com/wOv4prL.jpg?1)<br />
-![alt tag](http://i.imgur.com/wOv4prL.jpg?1)<br />
+![alt tag](http://i.imgur.com/6tiVUgc.jpg?1)<br />
 Contact Info:
 -----------
 Creator: Michael Hsiao<br>
