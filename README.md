@@ -31,12 +31,13 @@ Future Improvements:
 
 Final Product:
 ---------------
-![alt tag](http://i.imgur.com/Q8kGTpa.jpg?1)<br />
-![alt tag](http://i.imgur.com/PnxvrCp.jpg?1)<br />
-![alt tag](http://i.imgur.com/TpJynZp.png?1)<br />
-![alt tag](http://i.imgur.com/Hdu9J4z.jpg?1)<br />
-![alt tag](http://i.imgur.com/wOv4prL.jpg?1)<br />
-![alt tag](http://i.imgur.com/6tiVUgc.jpg?1)<br />
+<img src="http://i.imgur.com/Q8kGTpa.jpg?1" width="100%" title="source: imgur.com" />
+<img src="http://i.imgur.com/PnxvrCp.jpg?1" width="100%" title="source: imgur.com" />
+<img src="http://i.imgur.com/TpJynZp.png?1" width="100%" title="source: imgur.com" />
+<img src="http://i.imgur.com/Hdu9J4z.jpg?1" width="100%" title="source: imgur.com" />
+<img src="ttp://i.imgur.com/wOv4prL.jpg?1" width="100%" title="source: imgur.com" />
+<img src="http://i.imgur.com/6tiVUgc.jpg?1" width="100%" title="source: imgur.com" />
+
 Contact Info:
 -----------
 Creator: Michael Hsiao<br>
